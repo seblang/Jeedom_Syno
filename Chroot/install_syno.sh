@@ -1,6 +1,6 @@
 #!/bin/sh
 chmod 777 /dev/ttyUSB*
-wget --no-check-certificate –O https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/sources.list
+wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/sources.list
 mv sources.list /etc/apt/
 aptitude update
 aptitude upgrade
@@ -11,3 +11,8 @@ echo "export LANG=fr_FR.utf8" >> ~/.bashrc
 echo "export LC_ALL=fr_FR.utf8" >> ~/.bashrc
 dpkg-reconfigure tzdata
 echo "cd /home" >> ~/.bashrc
+wget --no-check-certificate http://github.com/jeedom/core/raw/master/install/install.sh
+chmod 777 install.sh
+install.sh
+wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/jeedom.sh
+chmod 777 jeedom.sh
