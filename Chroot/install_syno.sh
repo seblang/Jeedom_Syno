@@ -1,6 +1,7 @@
 #!/bin/sh
 chmod 777 /dev/ttyUSB*
-cp sources.list /etc/apt/
+wget --no-check-certificate –O https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/sources.list
+mv sources.list /etc/apt/
 aptitude update
 aptitude upgrade
 aptitude install sudo
