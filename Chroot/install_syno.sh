@@ -1,10 +1,11 @@
 #!/bin/sh
-chmod 777 /dev/ttyUSB*
+chmod 777 /dev/tty*
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/sources.list
 mv sources.list /etc/apt/
 aptitude update
 aptitude upgrade
 aptitude install sudo
+aptitude install curl
 aptitude install locales
 dpkg-reconfigure locales
 echo "export LANG=fr_FR.utf8" >> ~/.bashrc

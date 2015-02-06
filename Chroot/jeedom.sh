@@ -7,7 +7,7 @@ case "$1" in
    /etc/init.d/nginx start
    /etc/init.d/mysql start
    /etc/init.d/php5-fpm start
-   chmod 777 /dev/ttyU*
+   chmod 777 /dev/tty*
    /etc/init.d/jeedom start
    ;;
    "stop")
