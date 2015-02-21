@@ -24,9 +24,5 @@ wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/default_ssl
 mv default /etc/nginx/sites-available
 mv default_ssl /etc/nginx/sites-available
-wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/installopen.sh
-chmod 777 installopen.sh
-./installopen.sh
 ./jeedom.sh start
 rm installopen.sh
-rm install.sh
