@@ -18,6 +18,8 @@ chmod 777 install.sh
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/jeedom.sh
 chmod 777 jeedom.sh
 ./jeedom.sh stop
+sed -i -e "s/3306/3336/g" /etc/mysql/my.cnf
+sed -i -e "s/3306/3336/g" /usr/share/nginx/www/jeedom/core/config/common.config.php
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/default
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/default_ssl
 mv default /etc/nginx/sites-available
