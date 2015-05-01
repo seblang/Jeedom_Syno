@@ -2,13 +2,13 @@
 chmod 777 /dev/tty*
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/sources.list
 mv sources.list /etc/apt/
+wget http://www.dotdeb.org/dotdeb.gpg
+sudo apt-key add dotdeb.gpg
 apt-get update
 apt-get upgrade
 apt-get install sudo
 apt-get install curl
 apt-get install locales
-wget http://www.dotdeb.org/dotdeb.gpg
-sudo apt-key add dotdeb.gpg
 dpkg-reconfigure locales
 echo "export LANG=fr_FR.utf8" >> ~/.bashrc
 echo "export LC_ALL=fr_FR.utf8" >> ~/.bashrc
