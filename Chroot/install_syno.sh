@@ -7,6 +7,8 @@ apt-get upgrade
 apt-get install sudo
 apt-get install curl
 apt-get install locales
+wget http://www.dotdeb.org/dotdeb.gpg
+sudo apt-key add dotdeb.gpg
 dpkg-reconfigure locales
 echo "export LANG=fr_FR.utf8" >> ~/.bashrc
 echo "export LC_ALL=fr_FR.utf8" >> ~/.bashrc
