@@ -4,8 +4,8 @@
 #
 # there is start stop var because at stop modules usbserial should be unloaded last
 MODULES_DIR="/lib/modules"
-MODULES_START="usbserial.ko ftdi_sio.ko pl2303.ko cp210x.ko"
-MODULES_STOP="ftdi_sio.ko pl2303.ko cp210x.ko usbserial.ko"
+MODULES_START="usbserial.ko ftdi_sio.ko cp210x.ko"
+MODULES_STOP="ftdi_sio.ko cp210x.ko usbserial.ko"
  
 start_modules(){
         echo "--- Load modules ---"
