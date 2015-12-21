@@ -12,7 +12,7 @@ echo "export LANG=fr_FR.utf8" >> ~/.bashrc
 echo "export LC_ALL=fr_FR.utf8" >> ~/.bashrc
 dpkg-reconfigure tzdata
 echo "cd /home" >> ~/.bashrc
-wget --no-check-certificate http://github.com/jeedom/core/raw/master/install/install.sh
+wget --no-check-certificate https://github.com/jeedom/core/blob/stable/install/install.sh
 chmod 777 install.sh
 ./install.sh
 wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/jeedom.sh
